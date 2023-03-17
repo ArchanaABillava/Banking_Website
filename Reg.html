@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: 500;
+}
+
+.background-tint {
+    filter: sepia(100%) saturate(5%) brightness(45%) hue-rotate(100deg);
+}
+
+
+.content_text {
+    display: block;
+    /* margin: auto; */
+    display: flex;
+    /* margin-top: 367px; */
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    text-align: center;
+    font-style: italic;
+}
+
+.content {
+    height: 100vh;
+}
+
+.avatar img {
+    width: 75px;
+    display: block;
+    margin: auto;
+    margin-top: 90px;
+}
+
+
+.background::before {
+    height: 150vh;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: " ";
+    width: 58%;
+    /* content: ""; */
+    /* background: url("https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFua3xlbnwwfHwwfHw%3D&w=1000&q=80"); */
+    background: url("https://static.vecteezy.com/system/resources/previews/006/470/829/original/flat-style-illustration-of-bank-cashier-serving-his-customer-free-vector.jpg");
+    /* height: 130%; */
+    /* width: 75%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* opacity: 0.5; */
+}
+
+
+.p_font {
+    font-style: italic;
+    font-weight: 600;
+    color: blue;
+}
+
+.form-centered {
+    display: grid;
+    /* place-content: center;
+    align-items: center; */
+}
+
+.button-back {
+    background-color: rgb(255, 0, 0);
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+.status_color {
+    color: rgb(0, 0, 0);
+    background-color: rgb(17, 255, 0);
+    font-weight: bold;
+}
+
+.status_rcolor {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+.carousel_height {
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+}
+
+.sub_container {
+    height: 300px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+.manager_heading {
+    padding: 12px;
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+    color: #636397;
+    font-weight: 700;
+}
+
+.register_heading {
+    margin-bottom: 23px;
+    margin-top: 23px;
+    font-family: auto;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    /* font-variant: small-caps; */
+    font-size: 3.3rem;
+}
+
+.button-back:hover {
+    color: rgb(255, 0, 0);
+    background-color: white;
+    border: 1px solid rgb(255, 0, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+.button-log {
+    background-color: blueviolet;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+.button-log:hover {
+    color: blueviolet;
+    background-color: white;
+    border: 1px solid blueviolet;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.file_para {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 700;
+    color: red;
+}
+
+.button_submit {
+    background-color: rgb(31, 178, 31);
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+.button_submit:hover {
+    color: rgb(31, 178, 31);
+
+    background-color: white;
+    border: 1px solid rgb(31, 178, 31);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.button-centered {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    width: 50%;
+}
+
+.app-check {
+    height: 20px;
+    width: 20px;
+    margin: 1%;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.card-spaced {
+    float: left
+}
+
+.manager_card_heading {
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 12px;
+}
+
+.card-heading {
+    text-align: center;
+    font-family: auto;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.errmsg {
+    color: red;
+}
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7 p-0">
+                <!-- <div class="background"></div> -->
+                <div class="content">
+                    <div class="avatar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/924/924879.png" alt="">
+                    </div>
+                    <div class="content_text">
+                        <p class="w-50">"Alpha bank with more than 1lakh customers Lorem, ipsum dolor sit amet
+                            consectetur adipisicing
+                            elit.  " <span class="errmsg" ><br>--NewyorkTimes</span></p>
+
+
+                    </div>
+                    <div class="background"></div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <h1 class="register_heading">REGISTER</h1>
+                <div class="form-centered">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Full Name <span
+                                    class="errmsg">*</span></label>
+                            <input type="text" class="form-control w-100" id="formGroupExampleInput"
+                                placeholder="Enter your name" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Email<span
+                                    class="errmsg">*</span></label>
+                            <input type="email" class="form-control w-100" id="formGroupExampleInput2"
+                                placeholder="Enter your email address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Date of birth<span
+                                    class="errmsg">*</span></label>
+                            <input type="text" class="form-control w-100" id="formGroupExampleInput2"
+                                placeholder="Enter your dob in dd/mm/yyyy format">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Phone<span
+                                    class="errmsg">*</span></label>
+                            <input type="phone" class="form-control w-100" id="formGroupExampleInput2"
+                                placeholder="Enter your phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Gender<span
+                                    class="errmsg">*</span></label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Female</label>
+                            </div>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Address<span
+                                    class="errmsg">*</span></label>
+                            <div class="form-floating">
+                                <textarea class="form-control w-100"
+                                    placeholder="Enter your address as per proof of identity" id="floatingTextarea2"
+                                    style="height: 100px"></textarea>
+
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Aadhaar No<span
+                                    class="errmsg">*</span></label>
+                            <input type="text" class="form-control w-100" id="formGroupExampleInput2"
+                                placeholder="Enter your Aadhaar Number ">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">PAN No<span
+                                    class="errmsg">*</span></label>
+                            <input type="text" class="form-control w-100" id="formGroupExampleInput2"
+                                placeholder="Enter your PAN Number">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Choose files to upload<span
+                                    class="errmsg">*</span></label>
+                            <p class="w-100 file_para">Upload your proof of identity (AADHAR/PAN), proof of address
+                                (AADHAR/PAN) and passport size
+                                photo in
+                                jpg/png
+                                format</p>
+                            <input class="form-control w-100" type="file" id="formFileMultiple" multiple>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="button_submit d-block m-auto"><a href="UserHome.html" style="text-decoration: none;">Submit</a></button>
+                        </div>
+                    </form>
+                </div>
+
+                <p class=" text-center p_font">Already a customer, Please Login</p>
+                <div class="button-centered">
+                    <div class="mb-3">
+                        <a href="Login.html"><button type="btn" class="button-log me-3">Login</button></a>
+                        <button type="btn" class="button-back">Back</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-7 p-0">
+                <div class="background background-tint"></div>
+            </div> -->
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
